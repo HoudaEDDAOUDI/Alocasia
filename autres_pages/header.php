@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site officiel</title>
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
 </head>
 <body>
     <header class="header">
@@ -20,9 +23,6 @@
                 <li><a href="/contact.php">
                     <!-- <img src="contact-icon.png" alt="Icon Contact" class="icon"> -->
                     CONTACT</a></li>
-                <li><a href="/carte/index.php">
-                    <!-- <img src="contact-icon.png" alt="Icon Contact" class="icon"> -->
-                    carte</a></li>
             </ul>
         </nav>
 

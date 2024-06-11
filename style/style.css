@@ -115,14 +115,12 @@ nav ul li a {
     .menu-icon {
         display: block;
     }
-}
-
-@media screen and (max-width: 768px) {
     .user-space {
         position: absolute;
         right: 20px;
     }
 }
+
 
 .menu-icon.active + nav {
     display: flex;
@@ -668,6 +666,24 @@ main {
 }
 
 /* FIN PAGE CONNEXION */
+
+/* DÉBUT CODE CARTE*/
+.container {
+    display: flex;
+}
+
+#carte_ul{
+    width: 40vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#map {
+    width: 60vw;
+}
+#carte_ul, #map {
+    height: 400px;
+}
+/* FIN CARTE */
 
 /* PAGE PROFIL */
 

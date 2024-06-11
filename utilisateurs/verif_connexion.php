@@ -5,7 +5,6 @@ $password = $_POST['utilisateurs_mdp'];
 
 function verif_utilisateur($mail)
 {
-
     require("../admin/pdo.php");
     try {
         $req = $mabd->query('SELECT * FROM utilisateurs WHERE utilisateurs_mail = "'.$mail.'"');

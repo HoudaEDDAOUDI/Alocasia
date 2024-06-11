@@ -2,16 +2,22 @@
     include('autres_pages/header.php');
 ?>
     <main>
-        <section class="contact-form-section">
-            <h2>Formuler votre demande !</h2>
-            <form action="#" method="post" class="contact-form">
-                <label for="email">Email * :</label>
-                <input type="email" id="email" name="email" required>
+    <section class="contact-form-section">
+        <form action="#" method="post" class="contact-form">
+        <label for="email">Email * :</label>
+            <input type="email" id="email" name="email" required>
+
+        <div class="contact-nom-prenom">
+            <div class="contact-nom">
                 <label for="nom">Nom * :</label>
-                <input type="text" id="nom" name="nom" required>
+                    <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="contact-prenom">
                 <label for="prenom">Prenom * :</label>
-                <input type="text" id="prenom" name="prenom" required>
-                <label for="demande">Ma demande concerne * :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+            </div>
+        </div>
+            <label for="demande">Ma demande concerne * :</label>
                 <select id="demande" name="demande" required>
                     <option value="">--</option>
                     <option value="option1">Option 1</option>
