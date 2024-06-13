@@ -5,4 +5,5 @@ function toggleMenu() {
     menuIcon.classList.toggle('active');
     nav.classList.toggle('active');
 }
+//----------------------------Fermer page d'erreuR
 

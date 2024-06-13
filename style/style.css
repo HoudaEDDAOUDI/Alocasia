@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #F9F4EF;
+    font-family: "McLaren", sans-serif;
 }
 
 /* NAV */
@@ -12,6 +13,7 @@ body {
     align-items: center;
     padding: 0 20px;
     height: 60px;
+    color: #F9F4EF;
 }
 
 .logo {
@@ -37,17 +39,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #F9F4EF;
     text-decoration: none;
     font-size: 16px;
     display: flex;
     align-items: center;
 }
-
+.user-space2{
+    color: #F9F4EF;
+    display: flex;
+    align-items: center;
+}
 .user-space {
     position: relative;
     display: inline-block;
-    
 }
 
 .user-space .dropbtn {
@@ -71,7 +76,7 @@ nav ul li a {
 }
 
 .user-space .dropdown-content a {
-    color: white;
+    color: #F9F4EF;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -91,6 +96,13 @@ nav ul li a {
     font-size: 24px;
     cursor: pointer;
     color: white;
+}
+#pdp{
+    width: 50px;
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -173,14 +185,14 @@ main {
 .intro-section {
     text-align: center;
     margin: 20px 0;
-    background-color: #e0f7fa;
+    background-color: #86D3DF;
     padding: 20px;
     border-radius: 8px;
 }
 
 .intro-section h2 {
     font-size: 20px;
-    color: #176553;
+    color: #F9F4EF;
 }
 
 .intro-section p {
@@ -309,6 +321,95 @@ main {
 
 /* FIN PAGE ACCUEIL */
 
+/*-------------------------------AFFICHE VALIDE/erreur-------------------------------*/
+#valide,#erreur{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+  }
+  .success {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 320px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #84D65A;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px -3px #111;
+  }
+  .success__icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+    margin-right: 8px;
+  }
+  
+  .success__icon path {
+    fill: #393A37;
+  }
+  
+  .success__title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #393A37;
+  }
+  
+  .success__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .success__close path {
+    fill: #393A37;
+  }
+  /*-------------------------------GALERIE-AFFICHE ERREUR-------------------------------*/
+.error {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 320px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #EF665B;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px -3px #111;
+  }
+  
+  .error__icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+    margin-right: 8px;
+  }
+  
+  .error__icon path {
+    fill: #fff;
+  }
+  
+  .error__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    top: 0;
+  }
+  
+  .error__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .error__close path {
+    fill: #fff;
+  }
+/* FIN AFFICHE ERREUR/VALID */
+
 /* PAGE JARDINS */
 
 main {
@@ -347,6 +448,49 @@ main {
     justify-content: center;
     gap: 20px;
 }
+.jardins{
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    clear: both;
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+}
+.jardins li{
+    list-style-type: none;
+}
+.jardins li img{
+    width: 240px;
+    height: 172px;
+    border-radius: 5px;
+    padding-right: 50px;
+}
+.jardins.h3{
+    font-size: 25px;
+    color: red;
+}
+.container {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+#carte_ul{
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+#map {
+    width: 60vw;
+}
+#carte_ul, #map{
+    height: 500px;
+}
 
 .garden {
     background-color: #e8f5e9;
@@ -354,7 +498,6 @@ main {
     border-radius: 8px;
     text-align: center;
 }
-
 .garden img {
     max-width: 100%;
     border-radius: 8px;
@@ -445,6 +588,20 @@ main {
 
 /* FIN PAGE JARDINS */
 
+/* PAGE RESERVETION DE PARCELLE */
+.parcelles_dispo{
+    width: 135px;
+    height: 135px;
+    border: 0px;
+    margin: 5px;
+    border-radius: 10px;
+}
+#parcelles_choix{
+    width: 80%;
+    margin: auto;
+}
+/* FIN PAGE RESERVATION DE PARCELLE */
+
 /* PAGE CONTACT */
 
 .contact-form-section,
@@ -518,7 +675,9 @@ main {
     background-color: #f9a825;
 
 }
-
+.myparcelle{
+    width: 50%;
+}
 .contact-info {
     display: flex;
     justify-content: center;
@@ -654,46 +813,19 @@ main {
 .login-form input:focus {
     border-color: #00bcd4;
 }
-
+ 
 .signup-link {
     text-align: center;
     font-size: 14px;
 }
-
+ 
 .signup-link a {
-    color: #176553;
-    
+    color: #176553;   
 }
-
+ 
 /* FIN PAGE CONNEXION */
 
-/* DÉBUT CODE CARTE*/
-.container {
-    display: flex;
-}
-
-#carte_ul{
-    width: 40vw;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-#map {
-    width: 60vw;
-}
-#carte_ul, #map {
-    height: 400px;
-}
-/* FIN CARTE */
-
 /* PAGE PROFIL */
-
-.profile-section {
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #FFDBB7;
-    border-radius: 15px;
-}
 
 .profile-section h2 {
     font-size: 24px;
@@ -701,23 +833,34 @@ main {
 }
 
 .profile-info {
-    margin: 20px 0;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: #176553;
+    width: 30%;
 }
 
 .profile-picture {
-    width: 150px;
+    /* width: 150px;
     height: 150px;
-    background-color: #176553;
-    border-radius: 15px;
-    margin: 0 auto;
+    border-radius: 15px; */
+    margin-bottom: 20px ;
+}
+.profile-picture2{
+    margin-top: 35px;
+}
+#profile-picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.profile-info p {
-    font-size: 18px;
-    color: #176553;
-}
+
 
 .profile-content {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -759,6 +902,38 @@ main {
     height: 50px;
 }
 
+.profile-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.check-mark {
+    font-size: 24px;
+    color: green;
+}
+
+.cross-mark {
+    font-size: 24px;
+    color: red;
+}
+
+.profile-box{
+display: flex;
+    flex-direction: column;
+    justify-content: normal;
+}
+
+.profil-box h3{
+    margin-bottom :auto;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
 /* FIN PAGE PROFIL */
 
 /* FOOTER */

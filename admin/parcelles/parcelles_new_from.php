@@ -4,19 +4,23 @@
     <a href="parcelles_gestion.php" class="retour">Retour</a> 	
         <hr>
     <!-- PAS FINIIIIIS -->
-    <h2>Ajout d'un article</h2>
+    <h2>Ajout d'une parcelle</h2>
     <hr>
     <?php
         include('../pdo.php');
         $mabd->query('SET NAMES utf8;');
-        $req = 'SELECT * FROM  jardins INNER JOIN parcelles ON jardins._jardins_id=parcelles.jardins_id';
+        $req = 'SELECT * FROM parcelles 
+            INNER JOIN jardins ON parcelles._jardins_id=jardins.jardins_id 
+            LEFT JOIN utilisateurs ON parcelles._utilisateurs_id=utilisateurs.utilisateurs_id';
     ?>
 
-    <form method="POST" action="jardins_new_valid.php" enctype="multipart/form-data">
-        Type de plantations:<input type="text" name="plantations" ><br>
-        date de début:<input type="text" name="debut" ><br>
-        date de fin:<input type="text" name="fin" ><br>
-        Choisir le jardin:</label><select name="jardins">
+    <form method="POST" action="parcelles_new_valid.php" enctype="multipart/form-data">
+        Nom*: <input type="text" name="nom" required><br>
+        Type de plantations*:<input type="text" name="plantations" required><br>
+        Date de début*:<input type="date" name="debut" required><br>
+        Date de fin*:<input type="date" name="fin" required><br>
+        Choisir le jardin*:</label>
+        <select name="jardins" required>
             <?php
             include('../pdo.php');
             $mabd->query('SET NAMES utf8;');
@@ -27,8 +31,17 @@
                 echo '<option value="'.$value['jardins_id'].'">'.$value['jardins_nom'].'</option>';
             }
             ?>
-        </select>
+        </select><br>
+        Parcelle disponible (optionnel):
+        <select name="disponibilite">
+            <option value="">--Sélectionner--</option>
+            <option value="disponible">Oui</option>
+            <option value="réservée">Non</option>
+        </select><br>
+
+        Utilisateur(optinel):
         <select name="utilisateurs">
+            <option value="">--Sélectionner--</option>
             <?php
             include('../pdo.php');
             $mabd->query('SET NAMES utf8;');

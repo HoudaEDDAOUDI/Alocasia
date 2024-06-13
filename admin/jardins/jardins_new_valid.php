@@ -10,6 +10,8 @@
     <?php
     $nom=$_POST['nom'];
     $adresse=$_POST['adresse'];
+    $lon=$_POST['lon'];
+    $lat=$_POST['lat'];
     $surface=$_POST['surface'];
     $proprietaire=$_POST['proprietaire'];
 
@@ -20,9 +22,10 @@
 	$imageType=$_FILES["photo"]["type"];
     if ( ($imageType != "image/png") &&
         ($imageType != "image/jpg") &&
-        ($imageType != "image/jpeg") ) {
+        ($imageType != "image/jpeg") &&
+        ($imageType != "image/webp") ) {
             echo '<p>Désolé, le type d\'image n\'est pas reconnu !';
-            echo 'Seuls les formats PNG et JPEG sont autorisés.</p>'."\n";
+            echo 'Seuls les formats PNG, JPEG et WEBP sont autorisés.</p>'."\n";
         die();
     }
 
@@ -33,7 +36,7 @@
     // dépot du fichier téléchargé dans le dossier /var/www/r214/images/uploads
     if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
         if(!move_uploaded_file($_FILES["photo"]["tmp_name"], 
-        "/images/uploads/".$nouvelleImage)) {
+        "../../images/uploads/".$nouvelleImage)) {
             echo '<p>Problème avec la sauvegarde de l\'image, désolé...</p>'."\n";
             die();
         }
@@ -41,7 +44,7 @@
         echo '<p>Problème : image non chargée...</p>'."\n";
         die();
     }
-    $req = 'INSERT INTO jardins(jardins_nom,jardins_adresse,jardins_surface,jardins_proprietaire,jardins_photo) VALUES("'.$nom.'","'.$adresse.'","'.$surface.'","'.$proprietaire.'","'.$photo.'")';
+    $req = 'INSERT INTO jardins(jardins_nom,jardins_adresse,jardins_lon,jardins_lat,jardins_surface,jardins_proprietaire,jardins_photo) VALUES("'.$nom.'","'.$adresse.'","'.$lon.'","'.$lat.'","'.$surface.'","'.$proprietaire.'","'.$nouvelleImage.'")';
     $resultat = $mabd->query($req);
     include('../autres_pages/footer.php');
 ?>

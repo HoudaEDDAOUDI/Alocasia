@@ -65,6 +65,10 @@ function validation_inscription()
                     inscription_utilisateur($_POST['utilisateurs_nom'], $_POST['utilisateurs_prenom'], $_POST['utilisateurs_mail'], $mot);
                     // ) {
                         $_SESSION['utilisateurs_nom'] = $_POST['utilisateurs_nom'];
+                        $resultat['utilisateurs_photo']= 'avatar_default.webp';
+                        $_POST['utilisateurs_photo'] = $resultat['utilisateurs_photo'];
+                        $_SESSION['utilisateurs_photo'] = $_POST['utilisateurs_photo'];
+
                         header('Location: /index.php');
                         echo "Bienvenue.";
                         // exit();

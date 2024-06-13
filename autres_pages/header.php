@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+    </style>
 </head>
 <body>
     <header class="header">
@@ -25,20 +28,22 @@
                     CONTACT</a></li>
             </ul>
         </nav>
-
         <?php
         session_start();
 
         if(isset($_SESSION['utilisateurs_nom']))
-        {
-            echo '<div> Bienvenue '.$_SESSION['utilisateurs_nom'].'
-            <div class="user-space">
-                <button class="dropbtn">Mon espace</button>
-                <div class="dropdown-content">
-                    <a href="/utilisateurs/profil.php">Mon profil</a>
-                    <a href="/utilisateurs/deconnexion.php">Se déconnecter</a>
-                </div>
-            </div>';
+        {   
+            echo '
+            <div class="user-space2">
+                <a href="/utilisateurs/deconnexion.php">Se déconnecter</a>
+            </div>
+                <div class="user-space">
+                    <img id="pdp" src="/images/uploads/'.$_SESSION['utilisateurs_photo'].'" alt="'.$_SESSION['utilisateurs_photo'].'">
+                    <div class="dropdown-content">
+                        <a href="/utilisateurs/profil.php">Mon profil</a>
+                        <p>'.$_SESSION['utilisateurs_nom'].'</p>
+                    </div>
+                </div>';
         }else{
             echo '
             <div class="user-space">

@@ -1,7 +1,9 @@
 <?php
     include('autres_pages/header.php');
 ?>
+<header>
 
+</header>
     <main>
         <section class="how-it-works-section">
             <h2>Comment ça marche ?</h2>
@@ -31,14 +33,20 @@
 
                 if ($result->num_rows > 0) {
                     // Afficher les données des jardins dans une liste
+                    // <li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '"><img width="50%" src="images/gps.png" alt="icon d\'emplacement"></li>
                     while ($row = $result->fetch_assoc()) {
-                        echo '<div id="jardins">';
-                        echo '<li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_nom'] . '</li>';
-                        echo '<li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_proprietaire'] . '</li>';
-                        echo '<li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_adresse'] . '</li>';
-                        echo '<li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_surface'] . '</li>';
-                        echo '<li data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '"> <img src="images/'.$row['jardins_photo']. '" alt="'.$row['jardins_photo'].'" ></li>';
-                        echo '<button><a href="';
+                        echo '
+                        <div class="jardins2">
+                            <div class="jardins">
+                                <div>
+                                    <li class="h3" data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '"> <img src="images/uploads/'.$row['jardins_photo']. '" alt="'.$row['jardins_photo'].'" ></li>
+                                </div>
+                                <div class="infos">
+                                    <li class="nom" data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_nom'] . '</li>
+                                    <li class="prop" data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_proprietaire'] . '</li>
+                                    <li class="adresse" data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_adresse'] . '</li>
+                                    <li class="surface" data-lat="' . $row['jardins_lat'] . '" data-lon="' . $row['jardins_lon'] . '">' . $row['jardins_surface'] . '</li>
+                                <button><a href="';
                         if(isset($_SESSION['utilisateurs_nom'])){
                             echo '/jardins_reservation.php';
                         }else{
@@ -46,6 +54,8 @@
                         }
                         echo '?num=' . $row['jardins_id'] . '">Réserver</a></button>';
                         echo '</div>';
+                        echo '</div>';
+                        echo '<div><br>';
                     }
                 } else {
                     echo "0 results";
@@ -53,7 +63,7 @@
                 $conn->close();
                 ?>
             </ul>
-            <div id="map" style="height: 400px;"></div>
+            <div id="map" style="height: 500px;"></div>
         </div>
         <section class="add-your-garden-section">
             <button class="add-garden-button">Ajouter votre propre parcelle ici !</button>

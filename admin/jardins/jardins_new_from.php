@@ -3,7 +3,7 @@
 ?>
     <a href="jardins_gestion.php" class="retour">Retour</a> 	
         <hr>
-    <h2>Ajout d'un article</h2>
+    <h2>Ajout d'un jardin</h2>
     <hr>
     <?php
         include('../pdo.php');
@@ -14,6 +14,8 @@
     <form method="POST" action="jardins_new_valid.php" enctype="multipart/form-data">
         Nom:<input type="text" name="nom" ><br>
         Adresse:<input type="text" name="adresse" ><br>
+        Longitude:<input type="text" name="lon" ><br>
+        Latitude:<input type="text" name="lat"><br>
         Surface:<input type="text" name="surface" ><br>
         Propriétaire:<input type="text" name="proprietaire" ><br>
         Photo:<input type="file" name="photo" required /><br />
