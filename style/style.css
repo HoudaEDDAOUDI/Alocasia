@@ -954,7 +954,11 @@ footer {
 .footer-info div {
     width: 30%;
 }
-
+.legals{
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 .footer-info h4 {
     font-size: 16px;
     margin-bottom: 10px;
@@ -962,6 +966,9 @@ footer {
 
 .afoot {
     margin: 5px 0;
+}
+.svgImg{
+    filter: invert(1);
 }
 
 .footer-info a {

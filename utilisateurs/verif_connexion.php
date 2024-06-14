@@ -33,10 +33,11 @@ function verif_connexion()
                 $_SESSION['utilisateurs_nom']=$resul['utilisateurs_nom'];
                 $_SESSION['utilisateurs_prenom']=$resul['utilisateurs_prenom'];
                 $_SESSION['utilisateurs_id']=$resul['utilisateurs_id'];
-                $_SESSION['utilisateurs_id']=$resul['utilisateurs_id'];
+
                 $resultat['utilisateurs_photo']= 'avatar_default.webp';
                 $_POST['utilisateurs_photo'] = $resultat['utilisateurs_photo'];
                 $_SESSION['utilisateurs_photo'] = $_POST['utilisateurs_photo'];
+
                 $_SESSION['utilisateurs_mail']=$resul['utilisateurs_mail'];
                 $_SESSION['utilisateurs_mdp']=$resul['utilisateurs_mdp'];
                 //on affiche un message de connexion réussie

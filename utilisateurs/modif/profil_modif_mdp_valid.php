@@ -21,7 +21,6 @@ include('../../autres_pages/header.php');
     if (password_verify($ancien_mdp,$_SESSION['utilisateurs_mdp'])) {
        
         $nouveau_mdp_hache = password_hash($nouveau_mdp, PASSWORD_DEFAULT);
-
         $req = $mabd->prepare('UPDATE utilisateurs SET utilisateurs_mdp = :mdp WHERE utilisateurs_id = :id');
         $req->execute(['mdp' => $nouveau_mdp_hache, 'id' => $num]);
 

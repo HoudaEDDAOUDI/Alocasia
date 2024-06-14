@@ -13,6 +13,7 @@
     $lon=$_POST['lon'];
     $lat=$_POST['lat'];
     $surface=$_POST['surface'];
+    $nbr_parcelle=$_POST['nbr_parcelle'];
     $proprietaire=$_POST['proprietaire'];
 
     include('../pdo.php');
@@ -44,7 +45,7 @@
         echo '<p>Problème : image non chargée...</p>'."\n";
         die();
     }
-    $req = 'INSERT INTO jardins(jardins_nom,jardins_adresse,jardins_lon,jardins_lat,jardins_surface,jardins_proprietaire,jardins_photo) VALUES("'.$nom.'","'.$adresse.'","'.$lon.'","'.$lat.'","'.$surface.'","'.$proprietaire.'","'.$nouvelleImage.'")';
+    $req = 'INSERT INTO jardins(jardins_nom,jardins_adresse,jardins_lon,jardins_lat,jardins_surface,jardins_proprietaire,jardins_nbr_parcelles,jardins_photo) VALUES("'.$nom.'","'.$adresse.'","'.$lon.'","'.$lat.'","'.$surface.'","'.$proprietaire.'","'.$nbr_parcelle.'","'.$nouvelleImage.'")';
     $resultat = $mabd->query($req);
     include('../autres_pages/footer.php');
 ?>

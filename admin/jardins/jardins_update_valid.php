@@ -14,6 +14,7 @@
     $lat=$_POST['lat'];
     $surface=$_POST['surface'];
     $proprietaire=$_POST['proprietaire'];
+    $nbr_parcelle=$_POST['nbr_parcelle'];
     $num=$_POST['num'];
 
     include('../pdo.php');
@@ -49,10 +50,10 @@
 	            die();
             }
 
-    $req = 'UPDATE jardins SET jardins_nom="'.$nom.'",jardins_adresse="'.$adresse.'",jardins_lon="'.$lon.'",jardins_lat="'.$lat.'",jardins_surface="'.$surface.'",jardins_proprietaire="'.$proprietaire.'",jardins_photo="'.$nouvelleImage.'" WHERE jardins_id="'.$num.'"';
+    $req = 'UPDATE jardins SET jardins_nom="'.$nom.'",jardins_adresse="'.$adresse.'",jardins_lon="'.$lon.'",jardins_lat="'.$lat.'",jardins_surface="'.$surface.'",jardins_proprietaire="'.$proprietaire.'",jardins_nbr_parcelles="'.$nbr_parcelle.'",jardins_photo="'.$nouvelleImage.'" WHERE jardins_id="'.$num.'"';
         }
         else{
-            $req = 'UPDATE jardins SET jardins_nom="'.$nom.'",jardins_adresse="'.$adresse.'",jardins_lon="'.$lon.'",jardins_lat="'.$lat.'",jardins_surface="'.$surface.'",jardins_proprietaire="'.$proprietaire.'" WHERE jardins_id="'.$num.'"';
+            $req = 'UPDATE jardins SET jardins_nom="'.$nom.'",jardins_adresse="'.$adresse.'",jardins_lon="'.$lon.'",jardins_lat="'.$lat.'",jardins_surface="'.$surface.'",jardins_proprietaire="'.$proprietaire.'",jardins_nbr_parcelles="'.$nbr_parcelle.'" WHERE jardins_id="'.$num.'"';
         }
     $resultat = $mabd->query($req);
     ?>

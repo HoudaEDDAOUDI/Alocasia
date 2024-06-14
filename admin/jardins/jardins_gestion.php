@@ -16,6 +16,7 @@
                 <td>Latitude</td>
                 <td>Surface</td>
                 <td>Propriétaire</td>
+                <td>Nombre de parcelles</td>
                 <td>Nom de la photo</td>
                 <td>Photo</td>
                 <td>Supprimer</td>
@@ -38,6 +39,7 @@
         echo '<td>' . $value['jardins_lat'] . '</td>';
         echo '<td>' . $value['jardins_surface'] . '</td>';
         echo '<td>' . $value['jardins_proprietaire'] . '</td>';
+        echo '<td>' . $value['jardins_nbr_parcelles'] . '</td>';
         echo '<td>' . $value['jardins_photo'] . '</td>';
         echo '<td><img src="../../images/uploads/'.$value['jardins_photo'].'" alt="'.$value['jardins_photo'].'" width="100px"></td>';
         echo '<td><a href="jardins_delete.php?num='.$value['jardins_id'].'">supprimer</a></td>';

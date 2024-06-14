@@ -27,7 +27,16 @@
             Latitude:<input type="text" name="lat" value="<?php echo $jardins['jardins_lat'];?>"><br>
             Surface:<input type="text" name="surface" value="<?php echo $jardins['jardins_surface'];?>"><br>
             Propriétaire:<input type="text" name="proprietaire" value="<?php echo $jardins['jardins_proprietaire'];?>"><br>
-            Photo:<input type="file" name="photo" value="<?php echo $jardins['jardins_photo'];?>"><br>  
+            Photo:<input type="file" name="photo" value="<?php echo $jardins['jardins_photo'];?>"><br> 
+            Nombres de parcelle: 
+            <select name="nbr_parcelle" id="nbr_parcelle">
+            <?php
+                echo '<option value="' . $jardins['jardins_nbr_parcelles']. '">'.$jardins['jardins_nbr_parcelles'].'</option>';
+                for ($i = 1; $i <= 16; $i++) {
+                    echo '<option value="' . $i. '">'.$i.'</option>';
+                }
+            ?>
+            </select><br> 
             <input type="submit" name="">
         </form>
     </div>

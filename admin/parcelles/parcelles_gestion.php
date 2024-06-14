@@ -15,8 +15,8 @@
                 <td>Date de début</td>
                 <td>Date de fin</td>
                 <td>Disponibilité</td>
-                <!-- <td>Jardin</td>
-                <td>Utilisateurs</td> -->
+                <td>Jardin</td>
+                <td>Utilisateurs</td> 
                 <td>Supprimer</td>
                 <td>Modifier</td>
             </tr>
@@ -25,7 +25,9 @@
     <?php
     include('../pdo.php');
     $mabd->query('SET NAMES utf8;');
-    $req = "SELECT * FROM parcelles";
+    $req = "SELECT * FROM parcelles 
+            JOIN jardins ON parcelles._jardins_id = jardins.jardins_id
+            JOIN utilisateurs ON parcelles._utilisateurs_id = utilisateurs.utilisateurs_id";
     $resultat = $mabd->query($req);
 
     foreach ($resultat as $value) {
@@ -36,8 +38,8 @@
         echo '<td>' . $value['parcelles_date_debut'] . '</td>';
         echo '<td>' . $value['parcelles_date_fin'] . '</td>';
         echo '<td>' . $value['parcelles_disponibilite'] . '</td>';
-        // echo '<td>' . $value['_jardins_nom'] . '</td>';
-        // echo '<td>' . $value['_utilisateurs_nom'] . '</td>';
+        echo '<td>' . $value['jardins_nom'] . '</td>';
+        echo '<td>' . $value['utilisateurs_nom'] . '</td>';
         echo '<td><a href="parcelles_delete.php?num='.$value['parcelles_id'].'">supprimer</a></td>';
         echo '<td><a href="parcelles_update_form.php?num='.$value['parcelles_id'].'">modifier</a> </td>';
         echo '</tr>';
