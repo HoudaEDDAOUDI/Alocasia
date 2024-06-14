@@ -65,10 +65,15 @@ function validation_inscription()
                     inscription_utilisateur($_POST['utilisateurs_nom'], $_POST['utilisateurs_prenom'], $_POST['utilisateurs_mail'], $mot);
                     // ) {
                         $_SESSION['utilisateurs_nom'] = $_POST['utilisateurs_nom'];
+                        $_SESSION['utilisateurs_prenom']=$resul['utilisateurs_prenom'];
+
                         $resultat['utilisateurs_photo']= 'avatar_default.webp';
                         $_POST['utilisateurs_photo'] = $resultat['utilisateurs_photo'];
                         $_SESSION['utilisateurs_photo'] = $_POST['utilisateurs_photo'];
 
+                        $_SESSION['utilisateurs_mail']=$resul['utilisateurs_mail'];
+                        $_SESSION['utilisateurs_mdp']=$resul['utilisateurs_mdp'];
+                        
                         header('Location: /index.php');
                         echo "Bienvenue.";
                         // exit();
