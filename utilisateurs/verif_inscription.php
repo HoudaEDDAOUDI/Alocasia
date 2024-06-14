@@ -74,6 +74,8 @@ function validation_inscription()
                         $_SESSION['utilisateurs_mail']=$resul['utilisateurs_mail'];
                         $_SESSION['utilisateurs_mdp']=$resul['utilisateurs_mdp'];
                         
+                        $_SESSION['utilisateurs_id']=$resul['utilisateurs_id'];
+                        
                         header('Location: /index.php');
                         echo "Bienvenue.";
                         // exit();
