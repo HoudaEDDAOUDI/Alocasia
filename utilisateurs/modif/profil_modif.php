@@ -26,7 +26,7 @@
             <input type="email" name="mail" value="<?php echo $utilisateurs['utilisateurs_mail'];?>" required>
 
         <label for="photo">Photo* :</label>
-            <input type="file" name="photo" value="<?php echo $utilisateurs['utilisateurs_photo'];?>" required>
+            <input type="file" name="photo" value="<?php echo $utilisateurs['utilisateurs_photo'];?>">
 
         <button type="submit" class="submit-button">Modifier</button>
     </form>
