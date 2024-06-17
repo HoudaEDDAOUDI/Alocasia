@@ -1,390 +1,213 @@
 <?php
     include('autres_pages/header.php');
 ?>
-<style>
 
-/*-------------------------------------------------ACCEUIL-------------------------------------------------------*/
-
-/*----------------------A1----------------------*/
-
-.A1{
-    display: flex;
-    max-width: 100%;
-}
-
-.A1-2{
-    max-width:50%;
-    overflow: hidden;
-}
-
-.A1-2 img{
-    max-width:100%;
-
-}
-
-.A1-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.A1-1 h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3%;
-}
-
-.A1-1-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-/*----------------------A2----------------------*/
-
-
-.A2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 6%;
-    background-color: rgb(126, 211, 239);
-    color: #FFF;
-    padding: 5%;
-}
-
-.A2 p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1%;
-}
-
-/*----------------------A3----------------------*/
-
-
-.A3{
-    display: flex;
-    max-width: 100%;
-    gap: 2%;
-    padding: 3%;
-}
-
-.A3-1{
-    max-width:50%;
-    overflow: hidden;
-}
-
-.A3-1 img{
-    max-width:100%;
-
-}
-
-.A3-1-1 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-}
-
-.A3-1-1 img {
-    height: 100%;
-    width: 100%;
-    border-radius: 12%;
-}
-
-.A3-2{
-    max-width:50%;
-    overflow: hidden;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.A3-2 h1{
-    max-width:100%;
-    padding: 8px;
-    border-radius: 20px;
-    color: #FFF;
-    background-color: blueviolet;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: center;
-}
-
-.A3-2 img{
-    max-width:100%;
-}
-
-.A3-2-2 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-}
-
-.A3-2-2 img {
-    height: 100%;
-    width: 100%;
-    border-radius: 8%;
-}
-
-/*----------------------A4----------------------*/
-
-.A4{
-    display: flex;
-    align-items: center;
-    padding: 3%;
-    width: 100%;
-    justify-content: center;
-    max-width: 100%;
-    max-height: 10vh;
-    
-}
-
-.A4-1{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-    max-height: 10vh;
-
-
-
-}
-
-
-.A4-1 img{
-    max-height: 10vh;
-    width: 100%;
-    border-radius: 12%;
-    box-sizing: border-box;
-
-}
-
-/*----------------------A5----------------------*/
-
-.A5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*----------------------A6----------------------*/
-
-.A6{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 6%;
-    background-color: #dfb520;
-    color: #FFF;
-    padding: 5%;
-}
-
-.A6-2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 6%;
-    color: #FFF;
-    padding: 5%;
-    gap: 5vh;
-    width: 100%;
-    max-height: 7vh;
-}
-
-
-.A6-2-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.A6-2-1 p{
-    margin-top: 5%;
-    font-size: 1.5rem;
-}
-
-/*----------------------Autre----------------------*/
-
-.button{
-    padding: 2% 10%;
-    border-radius: 24px;
-    color: #FFF;
-    background-color: #dfb520;
-    text-decoration: none;
-    font-size: medium;
-    font-weight: bolder;
-    margin: 3%;
-
-}
-
-.button3{
-    padding: 2% 10%;
-    border-radius: 24px;
-    color: #FFF;
-    background-color: rgb(126, 211, 239);
-    text-decoration: none;
-    font-size: medium;
-    font-weight: bolder;
-    margin: 3%;
-
-}
-
-.button2{
-    padding: 30px;
-    font-size: large;
-    border-radius: 20px;
-    color: #FFF;
-    width: 25%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    background-color: rgb(126, 211, 239);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-.circle1 {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 12vw;
-    height: 12vw;
-    background-color: #017869;
-    border-radius: 50%;
-}
-
-.circle2 {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 12vw;
-    height: 12vw;
-    background-color: red;
-    border-radius: 50%;
-}
-
-.circle3 {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 12vw;
-    height: 12vw;
-    background-color: purple;
-    border-radius: 50%;
-}
-
-    </style>
 <main>
         <!-- <section class="welcome-section"> -->
         <div class="A1">
-            <div class="A1-1">
-                <h1>MAIN DANS LA MAIN, FAISONS FLEURIR NOS JARDINS !</h1>
-                <div class="buttons">
-                    <button class="button-find-garden"><a href="jardins.php">Trouver un jardin !</a></button>
-                    <button class="button-contact"><a href="contact.php">Contactez-nous !</a></button>
+            <!-- <div class="A1-1a"> -->
+                <div class="A1-1">
+                    <h1>MAIN DANS LA MAIN, FAISONS FLEURIR NOS JARDINS !</h1>
+                    <div class="buttons">
+                        <a class="button-find-garden" href="jardins.php">Trouver un jardin !</a>
+                        <a class="button-find-garden" href="contact.php">Contactez-nous !</a>
+                    </div>
                 </div>
-                </div>
-            <div class="A1-2">
-                <img src="images/ACEUIL.png" alt="">
+                <!-- <div class="A1-2">
+                    <img src="images/ACEUIL.png" alt="">
+                </div> -->
+            <!-- </div> -->
+            <div class="A1-1b">
+            <a href="#A2" id="scrollToA2"><span>&#8675;</span></a>
             </div>
         </div>
        
-        <div class="A2">
-            <h1>Bienvenue chez Alocasia !</h1>
-            <p>"Bienvenue dans notre oasis verte ! Nous sommes ravis de vous accueillir sur notre site dédié à l'écojardinage. Ici, vous pourrez partager votre expérience et votre envie de jardiner à plusieurs."</p>
+        <div id="A2">
+            <h2>Bienvenue chez Alocasia !</h2><br>
+            <p>Vous rêvez de cultiver votre propre jardin mais vous manquez d'espace ? Alocasia est là pour vous ! Notre plateforme de co-jardinage vous permet de réserver facilement des parcelles de jardin à Troyes. Rejoignez notre communauté d'amoureux de la nature et profitez des bienfaits du jardinage en partageant des espaces verts avec d'autres passionnés.<br><br>
+
+            Que vous soyez un jardinier débutant ou expérimenté, Alocasia vous offre la possibilité de cultiver vos légumes, fruits et fleurs dans un cadre convivial et collaboratif. Nos parcelles sont bien entretenues et prêtes à accueillir vos projets de jardinage.<br><br>
+
+            Réservez dès maintenant votre parcelle et transformez vos rêves de jardinage en réalité. Ensemble, cultivons un avenir plus vert et plus durable !<br><br></p>
         </div>
 
-        <div class="A3">
-        <div class="A3-1">
-            <div class="A3-1-1">
-            <img src="images/haha.png" alt="">
-            </div>
-        </div>
-        <div class="A3-2">
-            <H1>Le cojardinage</H1>
-            <div class="A3-2-2">
-                <img src="images/haha.png" alt="">
-            </div>
-        </div>
-    </div>
+        <div class="bento-box">
 
-    <div class="A4">
-        <div class="A4-1">
-        <img src="images/haha.png" alt="">
-        </div>
-    </div>
-    <div class="A5">
-            <button class="button2">Je souhaite commencer</button>
-    </div>
-    <div class="A6">
-        <div class="A6-1">
-            <h1>Les étapes pour commencer</h1>
-        </div>
-        <div class="A6-2">
-            <div class="A6-2-1">
-                <h1 class="circle1">1</h1>
-                <p>Créer votre compte.</p>
+            <div class="box box1">
+                <img src="images/bento_box.jpg" alt="">
             </div>
-            <div class="A6-2-1">
-                <h1 class="circle2">2</h1>
-                <p>Chercher un jardin près de chez vous.</p>
-            </div>
-            <div class="A6-2-1">
-              <h1 class="circle3">3</h1>
-              <p>Vous êtes prêt à jardiner!</p>
-            </div>
-        </div>
-    </div>
-        <!-- <section class="co-gardening-section">
-            <h2>Le cojardinage</h2>
-            <div class="co-gardening-content">
-                <img src="gardening-image.png" alt="Gardening">
-                <div class="co-gardening-offers">
-                    <div class="offer">+20% de Lorem ipsum</div>
-                    <div class="offer">+80% de Lorem ipsum</div>
-                    <div class="offer">+80% de Lorem ipsum</div>
+
+            <div class="box box2">
+                <h2>Le cojardinage</h2><br>
+                <div id="box2">
+                    <div class="box22">
+                        <!-- <img src="" alt=""> -->
+                        <p class="pourcentage">75%<br></p>
+                        <p>déclarent une amélioration de leur bien-être mental.</p>
+                    </div>
+                    <div class="box22">
+                        <!-- <img src="" alt=""> -->
+                        <p class="pourcentage">30%<br></p>
+                        <p>de réduction des déchets alimentaires.</p>
+                    </div>
+                    <div class="box22">
+                        <!-- <img src="" alt=""> -->
+                        <p class="pourcentage">65%<br></p>
+                        <p>utilisent des pratiques de jardinage biologique.</p>
+                    </div>
                 </div>
             </div>
-            <button class="button-start"><a href="utilisateurs/inscription.php">Je souhaite commencé</a></button>
-        </section> -->
 
-        <!-- <section class="steps-section">
-            <h2>Les étapes pour commencer</h2>
-            <div class="steps">
-                <div class="step">1<br>Créer votre compte.</div>
-                <div class="step">2<br>Chercher un jardin près de chez vous.</div>
-                <div class="step">3<br>Vous êtes prêts à jardinez!</div>
+            <div class="box box3">
+                <div class="box33">
+                    <div class="box3etape">1.</div>
+                    <div class="box3p">
+                        <p>Créer votre compte</p>
+                    </div>
+                </div>
+                <div class="box33">
+                    <div class="box3etape">2.</div>
+                    <div class="box3p">
+                        <p>Chercher un jardin</p>
+                    </div>
+                </div>
+                <div class="box33">
+                    <div class="box3etape">3.</div>
+                    <div class="box3p pp">
+                        <p>Vous êtes prêts à jardiner</p>
+                    </div>
+                </div>
             </div>
-        </section> -->
-        <section class="gardens-section">
-            <h2>Les jardins</h2>
-            <div class="garden">
-                <h3>Jardin de Lucas</h3>
-                <img src="garden-image.png" alt="Jardin de Lucas">
-                <p>Lucas - Adresse - Téléphone</p>
-                <button>Plus d'infos</button>
-                <button>Accepter</button>
-            </div>
-            <div class="garden">
-                <h3>Jardin de Mathilde</h3>
-                <img src="garden-image.png" alt="Jardin de Mathilde">
-                <p>Mathilde - Adresse - Téléphone</p>
-                <button>Plus d'infos</button>
-                <button>Accepter</button>
-            </div>
-        </section>
+        </div>
+        <div class="A5">
+            <a class="button-find-garden" href="/utilisateurs/inscription.php">Commencer</a>
+        </div>
+        <div class="A6">
+            
+        </div>
+        <?php
+            include('admin/pdo.php');
+            $mabd->query('SET NAMES utf8;');
+            
+            $req = "SELECT j.*, COUNT(p.parcelles_id) AS nombre_parcelles_disponibles
+                    FROM jardins j
+                    LEFT JOIN parcelles p ON j.jardins_id = p._jardins_id AND p.parcelles_disponibilite = 'disponible'
+                    GROUP BY j.jardins_id
+                    LIMIT 10";
+            
+            $resultat = $mabd->query($req)->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+<h2 class="h2">Les jardins</h2>
+<div id="scroll">
+    <!-- <button class="prev" aria-label="suivant"></button> -->
+    <div class="slider">
+        <?php
+        $articles_par_diapositive = 0; // Initialiser le compteur pour les articles par diapositive
+        $jardins_affiches = [];
+
+        foreach ($resultat as $index => $value) {
+
+            if (in_array($value['jardins_id'], $jardins_affiches)) {
+                continue; // Passer à l'itération suivante si le jardin est déjà affiché
+            }
+            // Ouvrir une nouvelle diapositive chaque deux jardins
+            if ($articles_par_diapositive % 3 == 0) {
+                echo '<div class="slide">';
+            }
+
+            // Afficher chaque jardin
+            echo '<div class="sacs">';
+            echo '<div class="proprio">';
+                echo '<h3>'.$value['jardins_nom'].'</h3>';
+                echo '<p>Chez '.$value['jardins_proprietaire'].'</p>';
+            echo '</div>';
+                echo '<div class="img_scroll">';
+                    echo '<img src="images/uploads/'.$value['jardins_photo'].'" alt="'.$value['jardins_photo'].'">';
+                echo '</div>';
+                echo '<div>';
+                    echo '<p>'.$value['jardins_adresse'].'</p>';
+                    echo '<p>'.$value['jardins_surface'].' m²</p>';
+                echo '</div>';
+                echo '<div class="parcelles_scroll">';
+                    echo '<p>Nombre de parcelles disponibles: '.$value['nombre_parcelles_disponibles'].'</p>';
+                    
+                    echo '<a class="plus" href="';
+                    if(isset($_SESSION['utilisateurs_nom'])){
+                        echo '/jardins_reservation.php';
+                    }else{
+                        echo '/utilisateurs/connexion.php';
+                    }
+                    echo '?num=' . $value['jardins_id'] . '">+</a>';
+                    
+                echo '</div>';
+                
+            echo '</div>';
+
+            // Fermer la diapositive après avoir affiché deux jardins
+            if ($articles_par_diapositive % 3 == 1 || $index == count($resultat) - 1) {
+                echo '</div>'; 
+            }
+
+            $articles_par_diapositive++; 
+        }
+        ?>
+    </div>
+    <!-- <button class="next" aria-label="précédente"></button> -->
+</div>
+    
     </main>
+    <script>
+        document.getElementById('scrollToA2').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('A2').scrollIntoView({ behavior: 'smooth' });
+        });
+
+
+                // / Sélectionnez votre élément slider
+            const slider = document.querySelector('.slider');
+            const slideWidth = slider.offsetWidth; // Largeur d'une slide
+            let intervalId; // Variable pour stocker l'ID de l'intervalle
+
+            // Fonction pour faire défiler vers la droite (next)
+            function slideNext() {
+                slider.scrollBy({
+                    left: slideWidth,
+                    behavior: 'smooth'
+                });
+
+                // Si on atteint la fin du slider, réinitialiser au début en douceur
+                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                    setTimeout(() => {
+                        slider.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    }, 500); // Délai avant de revenir au début (ajustable selon la vitesse du scroll)
+                }
+            }
+
+            // Fonction pour démarrer le défilement automatique
+            function startAutoSlide() {
+                intervalId = setInterval(slideNext, 4000); // Défile toutes les 5 secondes (5000 ms)
+            }
+
+            // Démarrer le défilement automatique au chargement de la page
+            startAutoSlide();
+
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('main-header');
+                const scrollPosition = window.scrollY;
+
+                // Ajouter la classe "scrolled" lorsque le défilement est au-dessus de 50 pixels
+                if (scrollPosition > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+    </script>
 <?php
     include('autres_pages/footer.php');
 ?>

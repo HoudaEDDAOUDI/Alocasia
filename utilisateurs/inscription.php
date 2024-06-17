@@ -2,9 +2,10 @@
     include('../autres_pages/header.php');
 ?>
 
-
-<section class="registration-form-section">
-    <h2>Inscription</h2>
+<main class="contact">
+<h1>Inscription</h1>
+<section class="contact-form-section">
+    
     <?php
         if(isset($_SESSION['erreur'])){
     ?>
@@ -21,31 +22,42 @@
             unset($_SESSION['erreur']);
         }
     ?>
-    <form action="verif_inscription.php" method="post" class="registration-form">
-        <label for="nom">Nom* :</label>
-            <input type="text" id="nom" name="utilisateurs_nom" placeholder="nom" required>
+    <form action="verif_inscription.php" method="post" class="contact-form">
+        <div class="input-container">
+            <input placeholder="john.doe@gmail.com" type="email" id="email" name="utilisateurs_mail" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="contact-nom-prenom">
+            <div class="input-container2">
+                <input placeholder="John" type="text" id="prenom" name="utilisateurs_prenom" required>
+                <label for="prenom">Prénom</label>
+            </div>
+            <div class="input-container2">
+                <input placeholder="Doe" type="text" id="nom" name="utilisateurs_nom" required>
+                <label for="nom">Nom</label>
+            </div>
+        </div>
+          
+        <div class="input-container">
+            <input type="password" id="password" name="utilisateurs_mdp" placeholder="******" required>
+            <label for="password">Mot de passe</label>
+        </div>
 
-        <label for="prenom">Prénom* :</label>
-            <input type="text" id="prenom" name="utilisateurs_prenom" placeholder="prenom" required>
-
-        <label for="email">Email* :</label>
-            <input type="email" id="email" name="utilisateurs_mail" placeholder="email" required>
-
-        <label for="password">Mot de passe * :</label>
-            <input type="password" id="password" name="utilisateurs_mdp" placeholder="mot de passe" required>
-
-        <label for="confirm-password">Confirmation du mot de passe * :</label>
-        <input type="password" id="confirm-password" name="utilisateurs_mdp2" placeholder="confirmer le mot de passe" required>
+        <div class="input-container">
+            <input type="password" id="confirm-password" name="utilisateurs_mdp2" placeholder="******" required>
+            <label for="confirm-password">Confirmation du mot de passe</label>
+        </div>
+        
 
         <label class="checkbox-container">
             <input type="checkbox" required>
-            <span class="checkmark"></span>
             Accepter les conditions générales d'utilisation.
         </label>
 
-        <button type="submit" class="submit-button">Inscription</button>
+        <button type="submit" class="button-envoyer">Inscription</button>
     </form>
 </section>
+    </main>
 <?php
     include('../autres_pages/footer.php');
 ?>

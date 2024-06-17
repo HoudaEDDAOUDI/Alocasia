@@ -9,7 +9,7 @@
             <div>
                 <h4>Plan du site</h4>
                 <p><a href="/legales/info_cookies.php"> Informations sur les cookies</a></p>
-                <p><a href="https://mmi23d11.sae202.ovh/agence/">Notre compagnie</a></p>
+                <p><a href="https://mmi23d11.sae202.ovh/agence/">Notre agence</a></p>
             </div>
             <div>
                 <h4>Nous suivre :</h4>
@@ -22,6 +22,7 @@
         </div>
         <p>Copyright © 2024 Alocasia. Tous droits réservés.</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
 </body>
 </html>

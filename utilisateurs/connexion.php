@@ -1,8 +1,10 @@
 <?php
     include('../autres_pages/header.php');
 ?>
-<section class="login-form-section">
-    <h2>Connexion</h2>
+<main class="contact">
+<h1>Connexion</h1>
+<section class="contact-form-section">
+    
     <?php
         if(isset($_SESSION['erreur'])){
     ?>
@@ -19,17 +21,22 @@
             unset($_SESSION['erreur']);
         }
     ?>
-    <form action="verif_connexion.php" method="post" class="login-form">
-        <label for="email">Email * :</label>
-            <input type="text" id="email" name="utilisateurs_mail" placeholder="email" required>
+    <form action="verif_connexion.php" method="post" class="contact-form">
+        <div class="input-container">
+            <input placeholder="john.doe@gmail.com" type="text" id="email" name="utilisateurs_mail" placeholder="email" required>
+            <label for="email">Email</label>
+        </div>
 
-        <label for="password">Mot de passe * :</label>
-            <input type="password" id="password" name="utilisateurs_mdp" placeholder="mot de passe" required>
-
-        <button type="submit" class="submit-button">Connexion</button>
+        <div class="input-container">
+            <input placeholder="*****" type="password" id="password" name="utilisateurs_mdp" placeholder="mot de passe" required>
+            <label for="password">Mot de passe</label>
+        </div>
+        
+        <button type="submit" class="button-envoyer">Connexion</button>
         <p class="signup-link">Pas de compte ? <a href="inscription.php">Créez le maintenant</a></p>
     </form>
 </section>
+    </main>
 <script>
         document.querySelectorAll('.error__close, .success__close').forEach(function(closeBtn) {
     closeBtn.addEventListener('click', function() {

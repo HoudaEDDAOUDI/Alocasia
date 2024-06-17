@@ -1,6 +1,7 @@
 <?php
     include('../autres_pages/header.php');
 ?>
+<main class="contact">
     <div class="legals">
 <H1>Politique de Confidentialité</H1>
 
@@ -72,7 +73,7 @@ La Société se réserve le droit de modifier la présente Politique à tout mom
 <h3>9. Contact</h3>
 Pour toute question ou demande d'information concernant la présente Politique, les Utilisateurs peuvent contacter la Société sur la page de contact du site. <br>
 </div>
-
+</main>
 </body>
 </html>
 

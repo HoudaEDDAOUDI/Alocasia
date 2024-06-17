@@ -1,8 +1,9 @@
 <?php
     include('autres_pages/header.php');
 ?>
-    <main>
-    <section class="contact-form-section">
+    <main class="contact">
+        <h1>Formulez votre demande</h1>
+        <section class="contact-form-section">
                 <?php
                     if(isset($_SESSION['information'])){
                         if($_SESSION['information'] == 'Votre demande à bien été envoyée.'){
@@ -34,45 +35,48 @@
                         unset($_SESSION['information']);
                     }
                 ?>
-        <form action="traitement/envoie_mail.php" method="post" class="contact-form">
-        <label for="email">Email * :</label>
-            <input type="email" id="email" name="email" required>
+            <form action="traitement/envoie_mail.php" method="post" class="contact-form">
 
-        <div class="contact-nom-prenom">
-            <div class="contact-nom">
-                <label for="nom">Nom * :</label>
-                    <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="contact-prenom">
-                <label for="prenom">Prenom * :</label>
-                    <input type="text" id="prenom" name="prenom" required>
-            </div>
-        </div>
-            <label for="demande">Ma demande concerne * :</label>
-                <select id="demande" name="demande" required>
-                    <option value="">--</option>
-                    <option value="les jardins">Les jardins</option>
-                    <option value="les parcelles">Les parcelles</option>
-                    <option value="votre compte">Mon compte</option>
-                </select>
+                    <div class="input-container">
+                        <input placeholder="john.doe@gmail.com" type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
 
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="submit-button">Envoyer</button>
+                <div class="contact-nom-prenom">
+                    <div class="input-container2">
+                        <input placeholder="John" type="text" id="prenom" name="prenom" required>
+                        <label for="prenom">Prenom</label>
+                    </div>
+                    <div class="input-container2">
+                        <input placeholder="Doe" type="text" id="nom" name="nom" required>
+                        <label for="nom">Nom</label>
+                    </div>
+                </div>
+
+                    <label for="demande">Ma demande concerne * :</label>
+                        <select id="demande" name="demande" required>
+                            <option value="">--</option>
+                            <option value="les jardins">Les jardins</option>
+                            <option value="les parcelles">Les parcelles</option>
+                            <option value="votre compte">Mon compte</option>
+                        </select>
+
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="button-envoyer">Envoyer</button>
             </form>
         </section>
+
         <section class="contact-info-section2" >
-            <h2 id="h2section2">Contactez nous aussi :</h2>
+            <h3 id="h2section2">Contactez nous aussi :</h3>
             <div class="contact-info">
-                <div class="contact-item">
-                    <p>07.38.93.39.30</p>
-                </div>
-                <div class="contact-item">
-                    <a href="#" class="social-button">Facebook</a>
-                </div>
-                <div class="contact-item">
-                    <a href="#" class="social-button">Instagram</a>
-                </div>
+                
+                    <a class="contact-item" href="tel:+33738933930">+33 7 38 93 39 30</a>
+
+                    <a href="#" class="contact-item">Facebook</a>
+
+                    <a href="#" class="contact-item">Instagram</a>
+
             </div>
         </section>
     </main>

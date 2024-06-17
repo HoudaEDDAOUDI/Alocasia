@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('../../autres_pages/header.php');
 ?>
 <section class="registration-form-section">

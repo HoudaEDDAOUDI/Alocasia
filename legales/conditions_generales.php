@@ -1,6 +1,7 @@
 <?php
     include('../autres_pages/header.php');
 ?>
+<main class="contact">
     <div class="legals">
     <h1>Conditions Générales d'Utilisation et de Vente</h1>
     <H3>Préambule</H3>
@@ -66,6 +67,7 @@
     <H2>10. Contact</H2>
     <p>Pour toute question ou demande d'information, les Utilisateurs peuvent contacter la Société sur la page contact du site. </p>
 </div>
+</main>
 <?php
     include('../autres_pages/footer.php');
 ?>

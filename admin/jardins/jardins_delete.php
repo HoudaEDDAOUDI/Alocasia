@@ -3,6 +3,7 @@
 ?>
     <a href="jardins_gestion.php" class="retour">Retour</a>
    <h2>Supprimer un jardin</h2> 
+   
    <hr>
    <?php
         // recupérer dans l'url l'id de l'album à supprimer
