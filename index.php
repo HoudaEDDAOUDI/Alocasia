@@ -99,7 +99,7 @@
 
 ?>
 <div id="youtube">
-<iframe width="560" height="315" src="/images/video_youtube.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="/images/video_youtube.mp4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <h2 class="h2">Les jardins</h2>
 <div id="scroll">
