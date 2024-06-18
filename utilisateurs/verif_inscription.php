@@ -39,20 +39,12 @@ function validation_inscription() {
             $resul = verif_utilisateur($_POST['utilisateurs_mail']);
 
             if(!$resul) {
-                // Définition de l'image par défaut
- 
-
                 $mot = password_hash($_POST['utilisateurs_mdp'], PASSWORD_DEFAULT);
-                $userId = inscription_utilisateur($_POST['utilisateurs_nom'], $_POST['utilisateurs_prenom'], $_POST['utilisateurs_mail'], $mot, $image_par_defaut);
+                $userId = inscription_utilisateur($_POST['utilisateurs_nom'], $_POST['utilisateurs_prenom'], $_POST['utilisateurs_mail'], $mot);
 
                 if ($userId) {
-                    session_start();
-                    $_SESSION['utilisateurs_id'] = $userId;
-                    $_SESSION['utilisateurs_nom'] = $_POST['utilisateurs_nom'];
-                    $_SESSION['utilisateurs_prenom'] = $_POST['utilisateurs_prenom'];
-                    $_SESSION['utilisateurs_mail'] = $_POST['utilisateurs_mail'];
-
-                    header('Location: /index.php');
+                    // Rediriger l'utilisateur vers la page de connexion après l'inscription réussie
+                    header('Location: /utilisateurs/connexion.php');
                     exit();
                 } else {
                     echo "Erreur lors de l'inscription.";
@@ -60,17 +52,19 @@ function validation_inscription() {
             } else {
                 $_SESSION['erreur'] = 'Vous avez déjà un compte.';
                 header('Location: /utilisateurs/connexion.php');
+                exit();
             }
         } else {
             $_SESSION['erreur'] = 'Les mots de passe sont différents.';
             header('Location: /utilisateurs/inscription.php');
+            exit();
         }
     } else {
         $_SESSION['erreur'] = 'Les champs sont mal remplis.';
         header('Location: /utilisateurs/inscription.php');
+        exit();
     }
 }
-
 
 validation_inscription();
 ?>

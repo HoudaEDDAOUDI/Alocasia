@@ -14,7 +14,7 @@
         $req->execute(['nom' => $_SESSION['utilisateurs_nom']]);
         $utilisateurs = $req->fetch();
     ?>
-    <form action="profil_modif_valid.php" method="post" class="contact-form">
+    <form action="profil_modif_valid.php" method="post" class="contact-form" enctype="multipart/form-data">
 
             <input type="hidden" name="num"  value="<?php echo $utilisateurs['utilisateurs_id']; ?>">
 
