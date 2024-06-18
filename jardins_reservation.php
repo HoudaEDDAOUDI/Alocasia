@@ -29,26 +29,25 @@ include('autres_pages/header.php');
         ?>
         
         <div id="parcelles_choix">
-            <?php
-            include('admin/pdo.php');
-            $mabd->query('SET NAMES utf8;');
-            $req = 'SELECT * FROM parcelles WHERE _jardins_id=' . $num;
-            $resultat = $mabd->query($req);
-            $row = $resultat->fetch(PDO::FETCH_ASSOC);
-            $resul = count($row);
+        <?php
+          include('admin/pdo.php');
+          $mabd->query('SET NAMES utf8;');
+          $req = 'SELECT * FROM parcelles WHERE _jardins_id=' . $num;
+          $resultat = $mabd->query($req);
 
-            if($resul != 0){
-                foreach($resultat as $value){
+          // Vérifier s'il y a des résultats
+          if ($resultat) {
+              // Boucler à travers les résultats
+              foreach($resultat as $value){
                   $couleur = ($value['parcelles_disponibilite'] == 'disponible') ? 'green' : 'grey';
                   $cursor = ($couleur == 'green') ? 'pointer' : '';
                   $disabled = ($value['parcelles_disponibilite'] == 'disponible') ? '' : 'disabled';
                   echo '<button class="parcelles_dispo" data-parcelle-id="' . $value['parcelles_id'] . '" style="background:' . $couleur . '; cursor:' . $cursor . ';"  ' . $disabled . '>' . $value['parcelles_nom'] . '</button>';
               }
-            }else{
-              echo 'Aucune parcelles n\'ai disponible.';
-            }
-            
-            ?>
+          } else {
+              echo 'Aucune parcelle trouvée.';
+          }
+          ?>
         </div>
         <div id="parcelle_details"></div>
         <form id="reservation-form" action="jardins_valid.php" method="POST">
