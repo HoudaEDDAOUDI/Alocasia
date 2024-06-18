@@ -126,7 +126,7 @@
                 echo '<p>Chez '.$value['jardins_proprietaire'].'</p>';
             echo '</div>';
                 echo '<div class="img_scroll">';
-                    echo '<img src="images/uploads/'.$value['jardins_photo'].'" alt="'.$value['jardins_photo'].'">';
+                    echo '<img src="images/uploads/'.$value['jardins_photo'].'" alt="'.$value['jardins_photo'].'" width="200" height="100">';
                 echo '</div>';
                 echo '<div>';
                     echo '<p>'.$value['jardins_adresse'].'</p>';

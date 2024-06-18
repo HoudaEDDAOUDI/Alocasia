@@ -68,7 +68,7 @@
         </section>
 
         <section class="contact-info-section2" >
-            <h3 id="h2section2">Contactez nous aussi :</h3>
+            <h2 id="h2section2">Contactez nous aussi :</h2>
             <div class="contact-info">
                 
                     <a class="contact-item" href="tel:+33738933930">+33 7 38 93 39 30</a>

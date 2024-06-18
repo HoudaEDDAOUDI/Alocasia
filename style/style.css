@@ -23,7 +23,7 @@ p{
 #header2{
     width: 90%;
     margin: 0 auto;
-    color: #634F46;
+    color: #3d2d25;
     display: flex;
     display: flex;
     justify-content: space-around;
@@ -64,7 +64,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #634F46;
+    color: #3d2d25;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -441,6 +441,9 @@ h1{
     width: 80%;
     margin: 0 auto;
     justify-content: center;
+}
+.img_scroll img{
+    object-fit: cover;
 }
 .parcelles_scroll{
     display: flex;
@@ -1195,7 +1198,7 @@ h1{
 
 footer {
     background-color: #ADC178;
-    color: #634F46;
+    color: #3d2d25;
     text-align: center;
     padding: 20px 0;
 }
@@ -1231,15 +1234,18 @@ footer {
 } */
 
 .footer-info a {
-    color: #634F46;
+    color: #3d2d25;
     text-decoration: none;
     margin: 0 5px;
+}
+.probleme{
+    display: none;
 }
 .footer-info a:hover {
     text-decoration:underline   ;
 }
 .footer-info div p a{
-    color: #634F46;
+    color: #3d2d25;
 }
 /* FIN FOOTER */
 /*-------------------ADMINISTRATION------------------*/
