@@ -8,6 +8,9 @@ body {
 }
 
 /* NAV */
+p{
+    color: #634F46;
+}
 
 #header {
     background-color: #ADC178;
@@ -20,7 +23,7 @@ body {
 #header2{
     width: 90%;
     margin: 0 auto;
-    color: #FEF3E8;
+    color: #634F46;
     display: flex;
     display: flex;
     justify-content: space-around;
@@ -33,7 +36,15 @@ body {
 #header:hover{
     background-color: #ADC178;
 }
-
+#youtube{
+    display: flex;
+    justify-content: center;
+}
+#youtube iframe{
+    width: 560px;
+    height: 315px;
+    object-fit: cover;
+}
 
 
 nav {
@@ -53,7 +64,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #F9F4EF;
+    color: #634F46;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -273,6 +284,7 @@ h1{
     align-items: center;
     font-size: 20px;
     width: 80%;
+    color: #FEF3E8;
     padding-bottom: 40px;
     margin: auto;
 }
@@ -360,7 +372,7 @@ h1{
     margin: 10px 0px 0px 10px;
 }
 .box3etape{
-    color: #FEF3E8;
+    color: #634F46;
     font-family: "McLaren", sans-serif;
     justify-content: center;
     display: flex;
@@ -421,7 +433,7 @@ h1{
     flex-direction: column;
     border: 2px solid #ADC178;
     width: 350px;
-    color: #ADC178;
+    color: #634F46;
 }
 .img_scroll{
     display: flex;
@@ -652,7 +664,7 @@ h1{
     width: 90%;
     padding: 10px;
     cursor: pointer;
-    color: #ADC178;
+    color: #634F46;
     display: flex;
     justify-content: space-between;
 }
@@ -767,7 +779,7 @@ h1{
     flex-direction: column;
 }
 .racap-reserv p{
-    color: #ADC178;
+    color: #634F46;
 }
 .racap-reserv h2{
     color: #634F46;
@@ -836,7 +848,7 @@ h1{
 
 .contact-form label {
     font-size: 16px;
-    color: #ADC178;
+    color: #634F46;
 } 
 .contact-form input,
 .contact-form select,
@@ -848,7 +860,7 @@ h1{
     font-size: 14px;
 }
 ::placeholder, option {
-    color: #FEF3E8; /* Couleur de votre choix */
+    color: #634F46; /* Couleur de votre choix */
     opacity: 1; /* Assure que la couleur soit complètement appliquée */
 }
 .contact-form textarea {
@@ -993,7 +1005,7 @@ h1{
 .signup-link {
     text-align: center;
     font-size: 14px;
-    color: #ADC178;
+    color: #634F46;
 }
 .signup-link a{
     color: #634F46;
@@ -1115,7 +1127,7 @@ h1{
     flex-direction: column;
 }
 .profile-box2 h2, .profile-box h2{
-    color: #ADC178;
+    color: #634F46;
 }
 
 .profile-box ul li {
@@ -1183,7 +1195,7 @@ h1{
 
 footer {
     background-color: #ADC178;
-    color: #FEF3E8;
+    color: #634F46;
     text-align: center;
     padding: 20px 0;
 }
@@ -1214,12 +1226,12 @@ footer {
 .afoot {
     margin: 5px 0;
 }
-.svgImg{
+/* .svgImg{
     filter: invert(1);
-}
+} */
 
 .footer-info a {
-    color: white;
+    color: #634F46;
     text-decoration: none;
     margin: 0 5px;
 }
@@ -1227,7 +1239,7 @@ footer {
     text-decoration:underline   ;
 }
 .footer-info div p a{
-    color: #FEF3E8;
+    color: #634F46;
 }
 /* FIN FOOTER */
 /*-------------------ADMINISTRATION------------------*/
@@ -1446,6 +1458,10 @@ footer {
     .buttons{
         display: flex;
         gap:50px;
+    }
+    #youtube iframe{
+        width: 560px;
+        height: 215px;
     }
     /*-------------------FIN PAGE ACCUEIL--------------------------------*/
     /*------------------------PAGE JARDINS------------------*/
